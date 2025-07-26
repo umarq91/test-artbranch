@@ -1,0 +1,5 @@
+node_modules
+src/context/UserInfoContext.tsx
+*.html
+dist
+public

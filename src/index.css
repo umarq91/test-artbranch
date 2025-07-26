@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+body.overflow-hidden {
+  overflow: hidden;
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scrollbar track */
+  border-radius: 10px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar thumb on hover */
+}
+
+.scrollbar-smooth {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #888 #9a9a9a; /* thumb and track color for Firefox */
+}
+
+/*  style for marquee */
+.marquee {
+  overflow: hidden; /* Hide overflowing content */
+  white-space: nowrap; /* Keep items in a single line */
+  width: 100%; /* Full width */
+}
+
+.marquee-inner {
+  display: inline-flex; /* Align items in a row */
+  animation: marquee 60s linear infinite; /* Slow continuous scrolling */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%); /* Start from right */
+  }
+  100% {
+    transform: translateX(-100%); /* Move to left */
+  }
+}
+
+/* Add a second marquee for the reverse direction */
+.marquee:nth-of-type(2) .marquee-inner {
+  animation: marquee-reverse 60s linear infinite; /* Slow continuous scrolling in reverse */
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-100%); /* Start from left */
+  }
+  100% {
+    transform: translateX(100%); /* Move to right */
+  }
+}
+
+.stroke-black {
+  -webkit-text-stroke: 1px black; /* 1px black stroke */
+  color: white; /* White text */
+}

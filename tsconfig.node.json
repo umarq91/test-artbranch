@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "target": "ES6",
+    "outDir": "./dist",
+    "strict": true,
+    "jsx": "react"
+  },
+  "include": [
+    "vite.config.mts",
+    "src/**/*.ts",
+    "src/helpers/Toast.tsx",
+    "src/context/MediaProvider.tsx",
+    "src/Pages/ArtistPortfolio-Manage/useProfileChangeHandler.tsx",
+    "src/context/UserInfoContext.tsx",
+    "src/Pages/ArtistPortfolio/useArtistPortfolio.tsx",
+    "src/hooks/useRequiredAuth.ts",
+    "src/Components/modals/portfolioModal.tsx",
+    "src/Pages/inspiration/useInspiration.tsx"
+  ],
+  "exclude": ["node_modules", "**/*.test.ts"]
+}
